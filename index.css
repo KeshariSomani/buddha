@@ -1,0 +1,417 @@
+p {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.fixed-nav {
+    text-align: center;
+    background-color: rgb(0, 48, 110);
+    color: white;
+}
+
+.button {
+    padding-left: 15px;
+    padding-right: 17px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0px;
+    border-radius: 25px;
+    color: rgba(0, 48, 110);
+    background-color: #77c9fcf5;
+    transition-duration: 0.4s;
+}.button:hover {
+    background-color: rgba(0, 123, 224, 0.963);
+    color: white;
+}
+
+#profile {
+    width: 25px;
+}
+
+/* Link Underline on hover  */
+.link {
+    position: relative;
+    text-decoration: none;
+    color: rgba(0, 48, 110);
+}.link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 48, 110);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}.link:hover::before {
+    transform: scaleX(1);
+}
+
+/* Container 1 */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-child {
+    width: 50%;
+}
+.one {
+    padding-top: 35%;
+    padding-left: 10%;
+}
+
+/* Image over image */
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+    object-fit: cover;
+    object-position: top;
+    height: 430px;
+    width: 750px;
+    z-index: 1;
+}
+.image2 {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 715px;
+    z-index: 1;
+}
+
+
+/* Wave */
+.Ocean {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #77c9fcf5;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.Wave {
+    width: 200%; /* Increase width for smoother transition */
+    animation-name: swell;
+    animation-duration: 10s; /* Slow down the animation for a smoother effect */
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    fill: #bfe6fff5;
+    z-index: 2;
+}
+
+@keyframes swell {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+/* card scroll button css */
+.cart-container {
+    display: flex;
+    overflow-x: hidden; /* Hide the scrollbar, but enable scrolling */
+    scroll-behavior: smooth;
+    gap: 20px; /* Space between cards */
+}
+
+.cart-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%; /* Make sure container takes full width */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.scroll-left, .scroll-right {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.scroll-left:hover, .scroll-right:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#card-img {
+    width: 270px;
+    margin-left: 165px;
+}
+
+/* Cart section */
+.cart-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 50px 0; 
+}
+.cart-container-child {
+    margin: 0 1%; 
+    flex: 1;
+    display: flex;
+}
+.card {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 10px;
+    margin: 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+.card-body {
+    flex: 1; 
+}
+.card-img-top {
+    margin-bottom: 10px; 
+}
+.cart-container-child:first-child .button {
+    width: 100px; 
+    margin-top: 10px; 
+}
+
+.cart-container-child:first-child .card{
+    padding: 40px;
+}
+
+.cart-container-child:first-child .card:hover {
+    background-color: #77c9fcf5;
+}
+
+/* Wave 2 */
+.Ocean-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #bfe6fff5;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.Wave-2 {
+    width: 200%; /* Increase width for smoother transition */
+    animation-name: swell;
+    animation-duration: 10s; /* Slow down the animation for a smoother effect */
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    fill: #77c9fcf5;
+    z-index: 2;
+    position: relative;
+}
+
+@keyframes swell {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container2-child {
+    width: 50%;
+    position: relative;
+    height: -100px;
+}
+.container2-child.two {
+    padding: 10%;
+    top: -210px;
+    z-index: 2;
+}
+.image3 {
+    position: relative;
+    top: -130px;
+    left: 100px;
+    object-fit: cover;
+    object-position: top;
+    height: 440px;
+    width: 450px;
+    z-index: 2;
+    animation: rotate 7s linear infinite; 
+}
+.image4 {
+    position: absolute;
+    top: -70px;
+    left: 163px;
+    width: 325px;
+    z-index: 2;
+    animation: rotate 13s linear infinite; 
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* End at 360 degrees */
+    }
+}
+
+/* Email Subscriber */
+.subscribe-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.subscribe-container input {
+    margin-right: 10px;
+    padding: 10px; 
+}
+
+.button {
+    padding: 10px 15px; 
+    cursor: pointer; 
+}
+
+#input {
+    border-radius: 25px;
+}
+
+/* Google translate button */
+.goog-te-gadget-icon {
+    display:none;
+  }
+.goog-te-gadget-simple {
+      background-color: #ecebf0 !important;
+      border:0 !important;
+      font-size: 10pt;
+     font-weight:800;
+      display: inline-block;
+      padding:10px 10px !important;
+      cursor: pointer;
+      zoom: 1;
+  }
+.goog-te-gadget-simple  span {
+     color:#3e3065 !important;
+}
+
+/* Card image */
+.card-img-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 75px;
+    height: 198px;
+    width: 300px;
+    z-index: 1;
+}
+.card-img-2 {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    width: 155px;
+    z-index: 1;
+}
+
+/* footer starts here */
+
+.footer-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping if content overflows */
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer-link a {
+    font-size: 15px;
+    font-weight: 400;
+    padding: .5rem 0;
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.footer-btn {
+    margin-top: 0;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: .5rem;
+}
+
+.footer-copy-right {
+    text-align: left;
+    margin-left: 40px;
+    padding-top: 1rem;
+    flex: 1; 
+}
+
+.footer-end-link {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 30px; 
+    flex: 1;
+    padding-right: 90px;
+}
+
+.footer-end-link .link {
+    text-decoration: none;
+    font-size: 14px;
+    color: inherit; 
+}
+
+/* footer end image */
+.responsive-image {
+    margin-left: 20px; 
+    width: 100%; 
+    padding: 25px; 
+    padding-bottom: 75px; 
+}
+
+/* footer end image end*/
+
+
+/* Optional media queries for responsiveness */
+@media (max-width: 768px) {
+    .footer-end {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-copy-right {
+        margin-left: 0;
+        padding-top: .5rem;
+    }
+
+    .footer-end-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
